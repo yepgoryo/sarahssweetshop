@@ -1,0 +1,839 @@
+/*
+    Design by yepgoryo
+*/
+
+@font-face {
+    font-family: "Vend Sans";
+    src: url('fonts/VendSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: "Agbalumo";
+    src: url('fonts/Agbalumo-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    --color-primary: #5A537D;
+    --color-border: #837DA1;
+    --color-shadow: #837DA17C;
+    --creation-margin: 10%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Vend Sans", sans-serif;
+}
+
+header {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: var(--color-primary);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 20px 0 20px 0;
+    gap: 5%;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+}
+
+.logo__text {
+    padding: 0 10px 0 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo__text__big {
+    font-family: "Agbalumo", sans-serif;
+    font-size: 20pt;
+    line-height: 17pt;
+}
+
+.logo__text__small {
+    font-family: "Vend Sans", sans-serif;
+    font-size: 12pt;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    list-style: none;
+    font-size: 16pt;
+}
+
+header nav ul li {
+    padding: 0 50px 0 50px;
+}
+
+.phone__number {
+    font-size: 16pt;
+    color: #fff;
+    font-weight: 600;
+}
+
+.phone__number__call {
+    display: flex;
+    align-items: center;
+}
+
+.social__network__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social__network__round {
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.hero__section {
+    position: relative;
+    overflow: hidden;
+    background: #0000009f url('img/ylanite_nietjuhart-background-8129599_1920.jpg') center/cover no-repeat;
+    background-blend-mode: darken;
+    z-index: 1;
+    top: -80px;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.hero__section__wrapper {
+    position: relative;
+    width: 1519px;
+    height: 750px;
+    margin: 0 auto;
+}
+
+.hero__section__background__fade {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    background: linear-gradient(90deg,rgba(90, 83, 125, 1) 40%, rgba(90, 83, 125, 0) 100%);
+}
+
+.hero__section__darken__overlay {
+    display: none;
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-shadow);
+}
+
+.hero__section__cupcake {
+    z-index: 3;
+    position: absolute;
+    transform: rotate(-3deg);
+    background: url('img/ssanchezfermin-cupcake-6653250_1920_crop.png') no-repeat;
+    background-size: contain;
+    right: 9%;
+    top: 125px;
+    width: 900px;
+    aspect-ratio: 900 / 681;
+}
+
+.hero__section__candy {
+    z-index: 3;
+    position: absolute;
+    transform: rotate(-5deg);
+    background: url('img/midora-candy-3177619_1920_crop1.png') no-repeat;
+    background-size: contain;
+    left: 30%;
+    bottom: -110px;
+    width: 250px;
+    aspect-ratio: 250 / 269;
+}
+
+.hero__section__donut {
+    z-index: 3;
+    position: absolute;
+    transform: rotate(43deg);
+    background: url('img/slava_web-designer-donuts-8503070_1920__crop.png') no-repeat;
+    background-size: contain;
+    left: -180px;
+    bottom: -20px;
+    width: 400px;
+    aspect-ratio: 400 / 225;
+}
+
+.hero__section__sweet__1 {
+    z-index: 3;
+    position: absolute;
+    transform: rotate(-66deg);
+    background: url('img/kranich17-sweets-4021988_1920_crop.png') no-repeat;
+    background-size: contain;
+    left: -120px;
+    top: 150px;
+    width: 300px;
+    aspect-ratio: 300 / 243;
+}
+
+.hero__section__sweet__2 {
+    z-index: 3;
+    position: absolute;
+    transform: rotate(173deg);
+    background: url('img/kranich17-sweets-4021988_1920_crop.png') no-repeat;
+    background-size: contain;
+    left: -10px;
+    top: 330px;
+    width: 170px;
+    aspect-ratio: 170 / 138;
+}
+
+.hero__section__content {
+    padding-top: 40px;
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero__section__headline {
+    width: 470px;
+    margin-left: 12%;
+    margin-top: 10%;
+}
+
+.hero__section__headline__text {
+    color: #fff;
+    font-size: 36pt;
+    font-weight: 200;
+    line-height: 100%;
+}
+
+.hero__section__headline__text b {
+    color: #fff;
+    font-size: 40pt;
+    font-family: "Agbalumo", sans-serif;
+}
+
+.hero__section__headline__description {
+    padding-top: 25px;
+    color: #fff;
+    font-size: 18pt;
+    font-family: "Vend Sans", sans-serif;
+}
+
+.hero__section__button__map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 200px;
+    gap: 20px;
+    padding: 20px 70px 20px 70px;
+    cursor: pointer;
+    margin-top: 20px;
+    background: #001B2E;
+    border-radius: 15px;
+    border: 1px solid var(--color-primary);
+    box-shadow: 0px 3px 10px var(--color-shadow);
+    color: #fff;
+    font-family: "Vend Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16pt;
+    transition: box-shadow .3s ease;
+}
+
+.hero__section__button__map:hover {
+    box-shadow: 0 0px 20px #ffffff7c;
+}
+
+main h1 {
+    font-size: 64pt;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.sweet__creations__list {
+    margin-top: 80px;
+    width: 100%;
+}
+
+.sweet__creation {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sweet__creation__wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.creation__description__box {
+    background: #F4F4FC;
+    border: 1px solid var(--color-primary);
+    box-shadow: 0px 3px 10px var(--color-shadow);
+    text-align: center;
+    color: var(--color-primary);
+    width: 300px;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.creation__description__right {
+    margin-left: calc(100% - 300px - (40px * 2) - var(--creation-margin));
+}
+
+.creation__description__left {
+    margin-left: var(--creation-margin);
+}
+
+.creation__description__box h1 {
+    font-family: "Agbalumo", sans-serif;
+    font-size: 20pt;
+}
+
+.creation__description__box p {
+    font-size: 14pt;
+}
+
+.creation__top {
+    background: url('img/cegoh-cupcakes-1133146_1920.jpg') center;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.creation__middle__1 {
+    background: url('img/paulitasolange-dessert-5804153_1920.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.creation__middle__2 {
+    background: url('img/584652-cake-1043615_1280.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.creation__bottom {
+    background: url('img/barcellosalice-candy-2696735_1920.jpg') center;
+    background-size: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+main h2 {
+    margin: 100px 0 50px 0;
+    font-size: 36pt;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.choose__us {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text__block__left {
+    color: var(--color-primary);
+    text-align: right;
+}
+
+.text__block__right {
+    color: #fff;
+    text-align: center;
+}
+
+.text__block__right h1 {
+    padding: 10px;
+    width: 430px;
+    font-size: 32pt;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.text__block p {
+    padding: 10px;
+    width: 430px;
+    font-size: 16pt;
+}
+
+.text__block__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.text__block__center h1 {
+    padding: 10px;
+    font-size: 32pt;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.text__block__center p {
+    padding: 10px;
+    font-size: 16pt;
+    line-height: 160%;
+}
+
+.image__text__block {
+    border-radius: 15px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0px 3px 10px var(--color-shadow);
+}
+
+.blue__block {
+    padding: 50px 0 50px 0;
+    width: 90%;
+    background: var(--color-primary);
+    border-radius: 15px;
+    margin: 100px auto 100px auto;
+    box-shadow: 0px 3px 10px var(--color-shadow);
+}
+
+.visit__us {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.block__socials__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.block__socials__list__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.block__socials__round__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.social__network__round__row {
+    padding: 10px 0 10px 0;
+    display: inline-block;
+}
+
+.block__socials__list .social__network__round {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.block__socials__list p {
+    padding: 15px;
+    font-size: 16pt;
+    color: var(--color-primary);
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.customer__reviews {
+    margin-bottom: 100px;
+}
+
+.review__container {
+    margin: 0 0 100px 0;
+}
+
+.review__image__container {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.review__image__container img {
+    position: absolute;
+    border-radius: 50%;
+    bottom: -50px;
+}
+
+.review__text__container {
+    z-index: 1;
+    position: relative;
+    border: 1px solid var(--color-border);
+    background: #FCFCFC;
+    box-shadow: 0px 3px 10px var(--color-shadow);
+    width: 45%;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 80px 30px 30px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review__text__container::before {
+    content: '🙶';
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    font-size: 50pt;
+    opacity: 0.3;
+}
+
+.review__text__container p {
+    color: #5A537D;
+    font-size: 16pt;
+}
+
+.reviewer__name {
+    font-family: "Agbalumo", sans-serif;
+    color: #5A537D;
+    font-size: 24pt;
+    align-self: end;
+}
+
+.contact__us {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact__link__container {
+    background: #001B2E;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 5px 0 10px;
+}
+
+.contact__link__container::after {
+    content: '';
+    display: inline-block;
+    margin: auto 5px auto 10px;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    background: url('img/arrow.svg');
+    background-size: contain;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 0 50px;
+}
+
+footer {
+    background: #001B2E;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 100px 0 15px 0;
+}
+
+.logo__text__footer {
+    padding: 0 30px 0 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo__text__big__footer {
+    font-family: "Agbalumo", sans-serif;
+    font-size: 36pt;
+    line-height: 33pt;
+}
+
+.logo__text__small__footer {
+    font-family: "Vend Sans", sans-serif;
+    font-size: 22pt;
+    text-align: center;
+}
+
+.footer__description {
+    padding: 20px;
+    color: #fff;
+    font-family: "Vend Sans", sans-serif;
+    font-size: 14pt;
+    text-align: left;
+    width: 350px;
+}
+
+.footer__menu {
+    color: #fff;
+    font-family: "Vend Sans", sans-serif;
+    font-size: 18pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    width: 250px;
+}
+
+.footer__copyright__notice {
+    color: #fff;
+    font-size: 12pt;
+    text-align: center;
+    margin: 50px auto 20px auto;
+}
+
+@media screen and (max-width: 1440px) {
+    main h1 {
+        font-size: 54pt;
+    }
+    
+    .hero__section__wrapper {
+        height: 650px;
+        width: 100%;
+    }
+
+    .hero__section__cupcake {
+        width: calc(900px * 0.85);
+        right: 5%;
+    }
+
+    .hero__section__candy {
+        width: calc(250px * 0.85);
+    }
+
+    .hero__section__donut {
+        width: calc(400px * 0.85);
+        left: -150px;
+        bottom: -10px;
+    }
+
+    .hero__section__sweet__1 {
+        width: calc(300px * 0.85);
+    }
+
+    .hero__section__sweet__2 {
+        width: calc(170px * 0.85);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .hero__section__headline {
+        width: 450px;
+    }
+
+    .hero__section__wrapper {
+        height: 550px;
+    }
+
+    .hero__section__headline__description {
+        padding-top: 35px;
+        color: #fff;
+        font-size: 14pt;
+        font-family: "Vend Sans", sans-serif;
+    }
+
+    .hero__section__headline__text {
+        color: #fff;
+        font-size: 28pt;
+        font-weight: 200;
+    }
+
+    .hero__section__headline__text b {
+        color: #fff;
+        font-size: 32pt;
+        font-family: "Agbalumo", sans-serif;
+    }
+
+    .hero__section__cupcake {
+        right: 3%;
+    }
+
+    .hero__section__sweet__1 {
+        left: -120px;
+        top: 110px;
+    }
+
+    .hero__section__sweet__2 {
+        left: -10px;
+        top: 290px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header .phone__number__call {
+        display: none;
+    }
+
+    header .social__network__list {
+        display: none;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav {
+        padding-top: 20px;
+    }
+
+    .hero__section__headline {
+        margin: 100px auto 0 auto;
+        text-align: center;
+    }
+
+    .hero__section__button__map {
+        margin: 20px auto 0 auto;
+    }
+
+    .hero__section__darken__overlay {
+        display: block;
+    }
+
+    .hero__section__cupcake {
+        right: -150px;
+    }
+
+    .choose__us {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .text__block__left {
+        text-align: center;
+        width: 80%;
+    }
+
+    .text__block__left p {
+        width: 100%;
+    }
+
+    .visit__us {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sweet__creation {
+        justify-content: end;
+        border-radius: 15px;
+        margin: 50px 0 50px 0;
+        height: 650px;
+    }
+
+    .creation__description__right, .creation__description__left {
+        margin: 0 auto;
+    }
+
+    .creation__description__box {
+        width: auto;
+    }
+
+    .review__text__container {
+        width: 80%;
+    }
+
+    .text__block p {
+        width: auto;
+    }
+
+    .text__block__right h1 {
+        width: auto;
+    }
+
+    .blue__block {
+        padding: 10px 0 10px 0;
+    }
+
+    .visit__us {
+        gap: 20px;
+    }
+
+    .block__socials__list__wrapper {
+        flex-direction: column;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer__side {
+        gap: 50px;
+    }
+
+    .block__socials__list {
+        gap: 50px;
+    }
+
+    main h1 {
+        font-size: 42pt;
+    }
+
+    .footer__description {
+        width: 320px;
+    }
+
+    .blue__block p {
+        font-size: 12pt;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero__section__headline {
+        width: 300px;
+    }
+
+    .hero__section__button__map {
+        padding: 20px;
+    }
+}
