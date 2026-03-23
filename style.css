@@ -21,6 +21,10 @@
     --creation-margin: 10%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
 }
